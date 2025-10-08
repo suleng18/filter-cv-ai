@@ -4,27 +4,35 @@ type QA = { q: string; a: string };
 
 const faqs: QA[] = [
   {
-    q: 'Có miễn phí sử dụng Máy Quét Hồ Sơ AI không?',
-    a: 'Có, bạn có thể nhận gói miễn phí để sử dụng thử công cụ sau khi đăng ký.',
+    q: 'AI Resume Scanner là gì?',
+    a: 'Là công cụ giúp quét và phân tích nội dung CV (PDF) bằng AI, chấm điểm phù hợp và gợi ý câu hỏi phỏng vấn.',
   },
   {
-    q: 'Có giới hạn về kích thước khi tải lên các tệp tin PDF không?',
-    a: 'Công cụ hỗ trợ các tệp PDF có kích thước tối đa khoảng 50MB (tùy môi trường).',
+    q: 'Công cụ có miễn phí không?',
+    a: 'Bạn có thể dùng miễn phí với giới hạn hợp lý. Với nhu cầu cao hơn, hãy liên hệ để mở rộng quota.',
   },
   {
-    q: 'Ai sẽ được hưởng lợi từ AI Resume Scanner?',
-    a: 'Nhà tuyển dụng, HR, và cả ứng viên muốn tối ưu hóa hồ sơ đều có thể sử dụng để đánh giá nhanh mức độ phù hợp.',
+    q: 'Hỗ trợ kích thước tệp tối đa bao nhiêu?',
+    a: 'Khuyến nghị ≤ 10MB trên bản serverless. Bản Docker tự host có thể xử lý tệp lớn hơn.',
   },
   {
-    q: 'Resume Scanner là gì?',
-    a: 'Là công cụ quét và phân tích nội dung CV, trích xuất thông tin chính, gợi ý câu hỏi phỏng vấn và chấm điểm phù hợp với JD.',
+    q: 'Có an toàn khi tải CV lên không?',
+    a: 'Chúng tôi chỉ xử lý tạm thời cho mục đích phân tích. Hãy kiểm tra chính sách bảo mật trước khi dùng dữ liệu nhạy cảm.',
+  },
+  {
+    q: 'Làm sao để tăng độ chính xác điểm phù hợp?',
+    a: 'Hãy dán mô tả công việc (JD) vào ô tuỳ chọn để AI so khớp CV với yêu cầu chi tiết hơn.',
+  },
+  {
+    q: 'Tôi có thể xuất kết quả không?',
+    a: 'Bạn có thể sao chép hoặc tải về JSON kết quả ngay trong phần “Chi tiết JSON”.',
   },
 ];
 
 export default function FAQSection() {
   return (
-    <section id="faq" className="faq">
-      <h2>FAQ - Câu hỏi thường gặp</h2>
+    <section id="faq" className="faq section-narrow">
+      <h2>FAQ</h2>
       <div className="faq-list">
         {faqs.map((item, idx) => (
           <details className="faq-item" key={idx}>

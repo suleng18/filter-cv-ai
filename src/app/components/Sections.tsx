@@ -104,16 +104,16 @@ export function MetricsSection() {
 export function CrossSellSection() {
   return (
     <section className="card section-narrow" id="cross-sell">
-      <h2>Các công cụ liên quan</h2>
+      <h2>Cross Sell</h2>
       <ul className="list">
         <li>
-          <a href="#">PDF sang JPG</a> – chuyển đổi nhanh trang CV thành hình.
+          <a href="#">PDF to JPG</a> – chuyển đổi nhanh trang CV thành hình để chèn vào form nội bộ.
         </li>
         <li>
-          <a href="#">PDF sang Word</a> – chỉnh sửa nội dung CV dễ dàng.
+          <a href="#">PDF to Word</a> – xuất CV sang Word để biên tập, làm nổi bật nội dung.
         </li>
         <li>
-          <a href="#">OCR PDF</a> – trích xuất văn bản từ CV scan.
+          <a href="#">OCR PDF</a> – trích xuất văn bản từ CV scan để tìm kiếm và so khớp từ khoá.
         </li>
       </ul>
     </section>
