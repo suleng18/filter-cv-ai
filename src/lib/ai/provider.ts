@@ -38,18 +38,18 @@ export class MockAIProvider implements AIProvider {
 }
 
 export class OpenAIProvider implements AIProvider {
-  private client: any;
+  private apiKey: string;
   constructor(apiKey: string) {
-    // Lazy import to avoid SSR issues
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const OpenAI = require('openai').default;
-    this.client = new OpenAI({ apiKey });
+    this.apiKey = apiKey;
   }
   async analyze(input: AnalyzeRequest): Promise<AnalyzeResult> {
+    const { default: OpenAI } = await import('openai');
+    const client = new OpenAI({ apiKey: this.apiKey });
+
     const system =
       'Bạn là trợ lý tuyển dụng. Phân tích CV, chấm điểm phù hợp (0-100), liệt kê strengths, gaps, tạo 5 câu hỏi phỏng vấn. Trả về JSON theo schema {matchScore,strengths,gaps,interviewQuestions,extracted:{rawText,skills,experiences,certifications}}.';
     const prompt = `CV:\n${input.text}\n\nJD:\n${input.jobDescription ?? ''}\n`;
-    const resp = await this.client.chat.completions.create({
+    const resp = await client.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: system },
@@ -57,11 +57,10 @@ export class OpenAIProvider implements AIProvider {
       ],
       response_format: { type: 'json_object' },
     });
-    console.log('🚀 - OpenAIProvider - resp:', resp);
+    // console.log('OpenAI completion usage:', resp.usage); // keep logs minimal in prod
 
     const content = resp.choices?.[0]?.message?.content || '{}';
     const parsed = JSON.parse(content);
-    // Basic runtime validation/normalization
     return {
       matchScore: Math.max(0, Math.min(100, Number(parsed.matchScore) || 0)),
       strengths: Array.isArray(parsed.strengths) ? parsed.strengths : [],
