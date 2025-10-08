@@ -13,7 +13,8 @@ export default function Page() {
             <span className="gradient-text">Check CV - Máy quét CV AI trực tuyến miễn phí</span>
           </h1>
           <p>
-            Check CV nhanh: phân tích CV PDF bằng trí tuệ nhân tạo, chấm điểm mức độ phù hợp và gợi ý câu hỏi phỏng vấn.
+            Check CV nhanh: phân tích CV PDF bằng trí tuệ nhân tạo, chấm điểm mức độ phù hợp và gợi
+            ý câu hỏi phỏng vấn.
           </p>
           <img
             src="/hero.svg"
