@@ -33,7 +33,7 @@ body {
   margin: 0;
   padding: 0;
   font-family:
-    var(--font-sans, ui-sans-serif),
+    Inter,
     ui-sans-serif,
     system-ui,
     -apple-system,
@@ -46,6 +46,26 @@ body {
   color: #111827;
   line-height: 1.6;
   letter-spacing: 0.2px;
+}
+
+:root {
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+}
+body {
+  font-size: var(--font-size-base);
+}
+.small {
+  font-size: var(--font-size-sm);
+}
+.lead {
+  font-size: var(--font-size-lg);
+}
+.display {
+  font-size: var(--font-size-xl);
+  font-weight: 800;
 }
 
 h1,

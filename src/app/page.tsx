@@ -10,15 +10,14 @@ export default function Page() {
       <section className="hero-block" id="drop">
         <div className="hero-inner">
           <h1>
-            <span className="gradient-text">Máy quét CV AI trực tuyến miễn phí</span>
+            <span className="gradient-text">Check CV - Máy quét CV AI trực tuyến miễn phí</span>
           </h1>
           <p>
-            Phân tích CV PDF bằng trí tuệ nhân tạo, chấm điểm mức độ phù hợp và gợi ý câu hỏi phỏng
-            vấn.
+            Check CV nhanh: phân tích CV PDF bằng trí tuệ nhân tạo, chấm điểm mức độ phù hợp và gợi ý câu hỏi phỏng vấn.
           </p>
           <img
             src="/hero.svg"
-            alt="Minh họa máy quét CV AI phân tích CV PDF và chấm điểm phù hợp"
+            alt="Check CV online - minh họa máy quét CV AI phân tích CV PDF và chấm điểm phù hợp"
             style={{ maxWidth: '760px', width: '100%', margin: '0 auto' }}
           />
           <AnalyzeClient />

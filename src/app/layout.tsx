@@ -8,7 +8,6 @@ const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-sans',
 });
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -18,7 +17,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>AI Resume Scanner</title>
       </head>
-      <body className={inter.variable}>
+      <body className={inter.className}>
         <div className="gradient-bg">
           <Header />
           {children}
