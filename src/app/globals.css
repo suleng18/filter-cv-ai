@@ -33,6 +33,7 @@ body {
   margin: 0;
   padding: 0;
   font-family:
+    var(--font-sans, ui-sans-serif),
     ui-sans-serif,
     system-ui,
     -apple-system,
@@ -42,10 +43,24 @@ body {
     Arial,
     'Apple Color Emoji',
     'Segoe UI Emoji';
-  color: #111827; /* explicit body text color for readability */
-  line-height: 1.6; /* improve readability */
-  letter-spacing: 0.2px; /* subtle tracking for body text */
+  color: #111827;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
 }
+
+h1,
+h2,
+h3 {
+  font-weight: 800;
+  letter-spacing: 0.1px;
+}
+h1 {
+  line-height: 1.2;
+}
+h2 {
+  line-height: 1.25;
+}
+
 main {
   max-width: 1200px;
   margin: 0 auto;
