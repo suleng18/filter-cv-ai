@@ -1,5 +1,12 @@
 import AnalyzeClient from './components/AnalyzeClient';
-import { FeaturesSection, StepsSection } from './components/Sections';
+import {
+  FeaturesSection,
+  StepsSection,
+  WhyUseSection,
+  HowToUseSection,
+  MetricsSection,
+  CrossSellSection,
+} from './components/Sections';
 import ToolsSection from './components/Tools';
 import FeatureDirectory from './components/Directory';
 import FAQSection from './components/FAQ';
@@ -29,7 +36,11 @@ export default function Page() {
 
       <ToolsSection />
       <FeaturesSection />
+      <WhyUseSection />
+      <HowToUseSection />
+      <MetricsSection />
       <StepsSection />
+      <CrossSellSection />
       <FeatureDirectory />
       <FAQSection />
     </>

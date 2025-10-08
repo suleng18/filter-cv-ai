@@ -730,6 +730,17 @@ video {
   height: auto;
 }
 
+/* Narrow section wrapper to prevent full-width overflow */
+.section-narrow {
+  max-width: 980px;
+  margin: 16px auto;
+}
+@media (max-width: 768px) {
+  .section-narrow {
+    margin: 12px auto;
+  }
+}
+
 @media (max-width: 1024px) {
   main {
     max-width: 960px;

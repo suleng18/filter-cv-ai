@@ -24,7 +24,7 @@ const faqs: QA[] = [
 export default function FAQSection() {
   return (
     <section id="faq" className="faq">
-      <h2>Câu hỏi thường gặp</h2>
+      <h2>FAQ - Câu hỏi thường gặp</h2>
       <div className="faq-list">
         {faqs.map((item, idx) => (
           <details className="faq-item" key={idx}>

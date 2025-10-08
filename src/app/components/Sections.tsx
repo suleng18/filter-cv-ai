@@ -55,3 +55,67 @@ export function StepsSection() {
     </section>
   );
 }
+
+export function WhyUseSection() {
+  return (
+    <section className="card section-narrow" id="why-use">
+      <h2>Why Use AI Resume Scanner</h2>
+      <ul className="list">
+        <li>Tiết kiệm thời gian sàng lọc CV, nhất quán trong đánh giá.</li>
+        <li>Gợi ý câu hỏi phỏng vấn bám sát nội dung CV và JD.</li>
+        <li>Dễ tích hợp vào quy trình hiện tại và mở rộng cho nhiều vị trí.</li>
+      </ul>
+    </section>
+  );
+}
+
+export function HowToUseSection() {
+  return (
+    <section className="card section-narrow" id="how-to-use">
+      <h2>How To Use</h2>
+      <ol className="list">
+        <li>Nhấn “Chọn tệp” và tải lên CV PDF.</li>
+        <li>(Tuỳ chọn) Dán JD để tăng độ chính xác khi chấm điểm.</li>
+        <li>Nhấn “Phân tích hồ sơ” và xem kết quả.</li>
+      </ol>
+    </section>
+  );
+}
+
+export function MetricsSection() {
+  return (
+    <section className="card section-narrow" id="metrics">
+      <h2>Metrics Explanation</h2>
+      <ul className="list">
+        <li>
+          <strong>Match Score</strong>: Điểm 0–100 ước lượng mức phù hợp của CV với JD.
+        </li>
+        <li>
+          <strong>Strengths/Gaps</strong>: Ưu điểm và điểm cần làm rõ để hỗ trợ ra quyết định.
+        </li>
+        <li>
+          <strong>Interview Questions</strong>: Gợi ý câu hỏi để xác thực trải nghiệm thực tế.
+        </li>
+      </ul>
+    </section>
+  );
+}
+
+export function CrossSellSection() {
+  return (
+    <section className="card section-narrow" id="cross-sell">
+      <h2>Các công cụ liên quan</h2>
+      <ul className="list">
+        <li>
+          <a href="#">PDF sang JPG</a> – chuyển đổi nhanh trang CV thành hình.
+        </li>
+        <li>
+          <a href="#">PDF sang Word</a> – chỉnh sửa nội dung CV dễ dàng.
+        </li>
+        <li>
+          <a href="#">OCR PDF</a> – trích xuất văn bản từ CV scan.
+        </li>
+      </ul>
+    </section>
+  );
+}
