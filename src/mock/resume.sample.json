@@ -1,0 +1,17 @@
+{
+  "rawText": "John Doe - Senior Software Engineer...",
+  "skills": [
+    "typescript",
+    "react",
+    "next.js",
+    "node",
+    "aws"
+  ],
+  "experiences": [
+    "Senior Software Engineer at ACME (2021-2024)",
+    "Software Engineer at Beta (2018-2021)"
+  ],
+  "certifications": [
+    "AWS Certified Solutions Architect"
+  ]
+}
