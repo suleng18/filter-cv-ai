@@ -687,3 +687,91 @@ textarea {
   border-color: #cbd5e1;
   background: linear-gradient(180deg, #f1f5f9, #ffffff);
 }
+
+/* Responsive helpers */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  main {
+    max-width: 960px;
+    padding: 16px;
+  }
+  .hero-inner {
+    max-width: 960px;
+  }
+  .tools-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  .tool-card {
+    min-height: 200px;
+  }
+  .results-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    max-width: 100%;
+    padding: 12px;
+  }
+  .nav {
+    padding: 8px 12px;
+  }
+  .nav-links {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .hero-inner h1 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+  .hero-inner p {
+    font-size: 14px;
+  }
+  .dropzone {
+    min-height: 120px;
+  }
+  .results-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .tools-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+  }
+  .tool-card {
+    min-height: 180px;
+    padding: 20px;
+  }
+  .dir-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 9px 14px;
+  }
+  .chip {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+  .score-badge {
+    width: 120px;
+    height: 120px;
+  }
+  .score-inner {
+    width: 96px;
+    height: 96px;
+  }
+  .score-num {
+    font-size: 22px;
+  }
+}
